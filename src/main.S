@@ -13,7 +13,8 @@ main:
   out   SPH,r16
   ;Configurar Output Leds
   ldi   r16,0xFF
-  out   DDRB,r16
+  out   DDRD,r16
+  out   PORTD,r16
   ldi   R16,(1<<ADEN)|(1<<ADSC)|(1<<ADATE)|(1<<ADPS2)|(0<ADPS1)|(0<<ADPS0)
   //      |enable ADC|start conv|auto-trig | factor(16) = 16 MHz / 16 = 1 MHZ = 1 us
   sts   ADCSRA,R16
