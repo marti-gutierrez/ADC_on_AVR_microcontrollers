@@ -1,3 +1,47 @@
+<style>
+    *
+    {
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .demo
+    {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+        min-height: 40vh;
+        padding: 20px 0;
+    }
+    .card
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 45%;
+        min-height: 300px;
+        padding: 1em
+        overflow: hidden;
+    }
+    .card__picture
+    {
+        height: 50%;
+    }
+    .card__img
+    {
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .card__paragraph
+    {
+        padding: 0.5em 0;
+    }
+</style>
+
 # ADC on microcontrollers (Atmega328p) or *Arduino UNO*
 
 This project is intended to show how the ADC (Analog Digital Converter) can be configured in the **ASM** and **C** languages of the AVR microcontroller architecture. This way we can use less memory capacity (Flash memory), compared to arduino, and understand what Arduino is doing when we use the function `analogRead(pin)`
@@ -8,8 +52,6 @@ The *ATmega328p* was chosen because it's the uC that is in the **Arduino UNO** a
 # Table of contents
 
 - [Demo](#demo)
-    - [Consetive samples](#consecutive-samples)
-    - one sample
 - Eschematic
     - Components
 - [Installation step](#installation-step)
@@ -19,10 +61,32 @@ The *ATmega328p* was chosen because it's the uC that is in the **Arduino UNO** a
 
 # Demo
 
-## Consecutive samples
-![adc en funcionamiento](https://media.giphy.com/media/GETaiFQgjzHZXZr7D3/giphy.gif)
+<section class="demo">
+    <div class="card">
+        <figure class="card__picture">
+            <img src="https://media.giphy.com/media/GETaiFQgjzHZXZr7D3/giphy.gif" alt="ADC en funcionamiento" class="card__img">
+        </figure>
+        <div class="card__texts">
+            <h2 class="card__title">Muestras consecutivas</h2>
+            <p class="card__paragraph">
+                Aqui esta tomando muestras consecutivas del potenciometro y mostrando el nivel digital de 8 bits por los leds.
+            </p>
+        </div>
+    </div>
+    <div class="card">
+        <figure class="card__picture">
+            <img src="https://media.giphy.com/media/GETaiFQgjzHZXZr7D3/giphy.gif" alt="ADC en funcionamiento" class="card__img">
+        </figure>
+        <div class="card__texts">
+            <h2 class="card__title">Muestras consecutivas</h2>
+            <p class="card__paragraph">
+                Aqui esta tomando muestras consecutivas del potenciometro y mostrando el nivel digital de 8 bits por los leds.
+            </p>
+        </div>
+    </div>
+</section>
 
-# Installation step
+<h2>Installation step</h2>
 
 ## Required Software
 
